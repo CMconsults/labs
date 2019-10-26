@@ -11,9 +11,11 @@ function readSyntax(syntax) {
         '(':')', '{':'}', '[':']', '<':'>'
 
  }
+ 
+ console.log(syntax.length)
  if (syntax.length === 1) return 0;
  for(let i = 0; i < syntax.length; i++){
-//  for(let i = 0; i < syntax.length && syntax.length <=  100000000 ; i++){
+//  for(let i = 0; i < syntax.length && i <=  100000000 ; i++){
     //check for the openings
 
     if(syntax[i] in variousSyntax){
@@ -49,6 +51,6 @@ function readSyntax(syntax) {
 
   
 }
-console.log(readSyntax('[[]]'));
-
+// console.log(readSyntax('{[[[[]<>]]]{}<><>[[[[[[]]]]]]{<>[]}}'.repeat(1000000) + '>'));
+// console.log("fasf".split(""));
 module.exports = readSyntax;
